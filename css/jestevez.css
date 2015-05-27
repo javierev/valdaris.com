@@ -1,0 +1,27 @@
+.banner .burger { width:20px; height:20px; margin-right:15px;}
+#sidebar-wrapper{background: #f8f8f8;}
+#sidebar-wrapper .sidebar-nav {margin-top:50px;}
+
+.sidebar-nav li a {
+    color: #000;
+}
+
+.sidebar-nav li a:hover {
+    color: #888888;
+    background: #f0f0f0;
+}
+.flags {
+	margin-bottom: 20px;
+}
+.flags img {
+	margin-right:20px;
+	cursor:pointer;
+}
+.links {
+	margin-top:20px;
+}
+.links img {
+	margin-left:10px;
+	margin-right:20px;
+	cursor:pointer;
+}
