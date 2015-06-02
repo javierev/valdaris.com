@@ -7,7 +7,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Javier Estévez, Software Developer</title>
 
-    <!-- Bootstrap -->
+    <!-- librerias -->
+    <script src="js/lib/jquery-min.js"></script>
+    <script src="js/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/lib/underscore.js"></script>
+    <script src="js/lib/backbone.js"></script>
+    <!-- estilos -->
     <link href="js/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/jestevez.css" rel="stylesheet">
@@ -16,59 +21,22 @@
   <div id="wrapper">
 <!-- Sidebar -->
         <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li>
-                    <div class="flags">
-                      <img src="img/spain.png" /><img src="img/uk.png" />
-                    </div>
-                </li>
-                <li>
-                    <a href="#">About me</a>
-                </li>
-                <li>
-                    <a href="#">Projects</a>
-                </li>
-                <li>
-                    <a href="#">Blog</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-                <li>
-                    <div class="links">
-                      <img src="img/sigfault.png" /><img src="img/100pixels.png" />
-                    </div>
-                </li>
-                <li>
-                    <div class="links">
-                      <img src="img/twitter.png" /><img src="img/linkedin.png" />
-                    </div>
-                </li>
-            </ul>
-
-            
+            <ul class="sidebar-nav"></ul>
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
-                <span class="banner visible-xs-block"><img src="img/burger.png" id="menu-toggle" class="burger" /> Javier Estévez, software developer</span>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>   Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 
+    <script type="text/template" id="template-list-content">
+    	<a href="#"><%=titulo%></a>
+    </script>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/lib/jquery-min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/lib/bootstrap/js/bootstrap.min.js"></script>
     <!-- Menu Toggle Script -->
     <script>
     $("#menu-toggle").click(function(e) {
@@ -76,6 +44,9 @@
         $("#wrapper").toggleClass("toggled");
     });
     </script>
+    <script src="js/models/content.js"></script>
+    <script src="js/models/contents.js"></script>
+    <script src="js/views/contentListView.js"></script>
 
   </body>
 </html>

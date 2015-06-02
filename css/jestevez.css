@@ -25,3 +25,11 @@
 	margin-right:20px;
 	cursor:pointer;
 }
+img.left {
+	float:left;
+	margin-top:20px;
+}
+img.right {
+	float:right;
+	margin-top:20px;
+}
