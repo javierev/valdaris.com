@@ -19,35 +19,34 @@
   </head>
   <body>
   <div id="wrapper">
-<!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav"></ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav"></ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <span class="banner visible-xs-block"><img src="img/burger.png" id="menu-toggle" class="burger" /> Javier Estévez, software developer</span>
+            <div class="row">
+                <div class="col-lg-12">
+                </div>
             </div>
         </div>
     </div>
+  </div>
 
     <script type="text/template" id="template-list-content">
     	<a href="#"><%=title%></a>
     </script>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
     <script src="js/models/content.js"></script>
     <script src="js/models/contents.js"></script>
     <script src="js/collections/contents.js"></script>
     <script src="js/views/contentListItemView.js"></script>
     <script src="js/views/contentsView.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/init.js"></script>
   </body>
 </html>
