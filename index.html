@@ -30,7 +30,7 @@
         <div class="container-fluid">
             <span class="banner visible-xs-block"><img src="img/burger.png" id="menu-toggle" class="burger" /> Javier Estévez, software developer</span>
             <div class="row">
-                <div class="col-lg-12">
+                <div id="main_content" class="col-lg-12">
                 </div>
             </div>
         </div>
@@ -40,11 +40,23 @@
     <script type="text/template" id="template-list-content">
     	<a href="#"><%=title%></a>
     </script>
+    <script type="text/template" id="template-content">
+        <div class="row">
+            <p><img src="<%=imgUrl%>" class="right" /></p>
+        </div>
+        <div class="row">
+            <%if (!_.isUndefined(secondTitle)) { %>
+                <h1><%=secondTitle%></h1>
+            <% } %>
+            <%=content%>
+        </div>
+    </script>
 
     <script src="js/models/content.js"></script>
     <script src="js/models/contents.js"></script>
     <script src="js/collections/contents.js"></script>
     <script src="js/views/contentListItemView.js"></script>
+    <script src="js/views/contentDetailView.js"></script>
     <script src="js/views/contentsView.js"></script>
     <script src="js/router.js"></script>
     <script src="js/init.js"></script>

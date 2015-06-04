@@ -6,8 +6,6 @@ ValdarisApp.Router = Backbone.Router.extend({
 	},
 	initialize: function() {
 		ValdarisApp.contentsList = new ValdarisApp.Contents();
-		var item = new ValdarisApp.Content({title:'Este es mi título'});
-		ValdarisApp.contentsList.add(item);
 		this.listView = new ValdarisApp.ContentsView({
 			collection:ValdarisApp.contentsList
 		});
@@ -17,5 +15,8 @@ ValdarisApp.Router = Backbone.Router.extend({
 	},
 	_detalle: function() {
 	
+	},
+	_notFound: function() {
+		
 	}
 })
