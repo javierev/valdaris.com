@@ -14,9 +14,13 @@ window.ValdarisApp.ContentsView = Backbone.View.extend({
 		var contentListItemView = new window.ValdarisApp.ContentListItemView({
 			model: model
 		});
+		this.listenTo(contentListItemView, 'seeContents', this.seeContents);
 		return contentListItemView.el;
 	},
 	add: function(model) {
 		this.$('ul.sidebar-nav').append(this.renderModel(model));
+	},
+	seeContents : function(model) {
+		this.trigger('seeContents', model);
 	}
 })
