@@ -5,9 +5,11 @@ ValdarisApp.Router = Backbone.Router.extend({
 		'*notFound' : '_notFound'
 	},
 	initialize: function() {
+		var router = this;
 		ValdarisApp.contentsList = new ValdarisApp.Contents();
 		ValdarisApp.contentsList.fetch().done(function() {
 			Backbone.history.start();
+			router._infoModel(ValdarisApp.contentsList.first());
 		});
 		this.listView = new ValdarisApp.ContentsView({
 			collection:ValdarisApp.contentsList
