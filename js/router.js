@@ -6,11 +6,13 @@ ValdarisApp.Router = Backbone.Router.extend({
 	},
 	initialize: function() {
 		ValdarisApp.contentsList = new ValdarisApp.Contents();
+		ValdarisApp.contentsList.fetch().done(function() {
+			Backbone.history.start();
+		});
 		this.listView = new ValdarisApp.ContentsView({
 			collection:ValdarisApp.contentsList
 		});
 		this.listenTo(this.listView, 'seeContents', this._infoModel);
-		Backbone.history.start();
 	},
 	_list: function() {
 		//Nothing to do here
@@ -21,17 +23,17 @@ ValdarisApp.Router = Backbone.Router.extend({
 			this.currentContent.close();
 		}
 		var item = ValdarisApp.contentsList.get(id);
-		this._detalleModel(item);
+		this._infoModel(item);
 	},
 	_infoModel: function(model) {
 		if (!!model) {
 			this.currentContent = new ValdarisApp.ContentDetailView({model:model});
-			this.navigate('detalle/'+model.get('id'));
+			this.navigate('info/'+model.get('id'));
 		} else {
 			this._notFound();
 		}
 	},
 	_notFound: function() {
-		
+		alert('not found!');
 	}
 })
