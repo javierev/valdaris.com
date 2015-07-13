@@ -5,6 +5,7 @@ window.ValdarisApp.Content = Backbone.Model.extend({
 		title:null,
 		secondTitle:null,
 		imgUrl:null,
+		imgAlignment:'right',
 		content:null,
 		imageCredit:null
 	}

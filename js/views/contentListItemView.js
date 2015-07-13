@@ -12,7 +12,7 @@ window.ValdarisApp.ContentListItemView = Backbone.View.extend({
 		},
 		'click' : function(e) {
 			e.stopPropagation();
-			$("#wrapper").toggleClass("toggled");
+			$("#wrapper").toggleClass("toggled"); 
 			this.trigger('seeContents', this.model);
 		}
 	},
