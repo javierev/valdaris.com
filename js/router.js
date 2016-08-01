@@ -14,6 +14,9 @@ ValdarisApp.Router = Backbone.Router.extend({
 		this.listView = new ValdarisApp.ContentsView({
 			collection:ValdarisApp.contentsList
 		});
+		this.titleView = new ValdarisApp.TitleView({
+			model:new ValdarisApp.TitleModel({'title':'Javier Estévez, Software Developer'})
+		});
 		this.listenTo(this.listView, 'seeContents', this._infoModel);
 	},
 	_list: function() {
@@ -34,6 +37,7 @@ ValdarisApp.Router = Backbone.Router.extend({
 		} else {
 			this._notFound();
 		}
+		this.titleView.toggleSidebar();
 	},
 	_notFound: function() {
 		alert('not found!');

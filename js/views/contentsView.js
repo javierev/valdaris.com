@@ -20,7 +20,7 @@ window.ValdarisApp.ContentsView = Backbone.View.extend({
 	add: function(model) {
 		this.$('ul.sidebar-nav').append(this.renderModel(model));
 	},
-	seeContents : function(model) {
+	seeContents: function(model) {
 		this.trigger('seeContents', model);
 	}
 })
